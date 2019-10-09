@@ -2,7 +2,9 @@
 
 Este repositorio pretende recoger información en español sobre los atajos ("shortcuts") de iOS. Se ha formado una comunidad bastante decente de usuarios aprendiendo y enseñando sobre atajos en el grupo de Telegram [@shortcuts_es](https://t.me/shortcuts_es). Pese a lo utilísimo que es Telegram, a veces se echa en falta un sitio donde recoger enlaces y ficheros relacionados, y de ahí ha salido la idea de este repositorio.
 
-Por ahora esto está bastante vacío. Para empezar, algunos enlaces interesantes:
+Por ahora esto está bastante vacío. Para empezar, repasa nuestra [FAQ](FAQ.md).
+
+Luego te pueden interesar algunos de estos enlaces:
 
 * [Manual del usuario de Atajos](https://support.apple.com/es-us/guide/shortcuts/welcome/ios) de Apple
 * ["Descubriendo Shortcuts para iOS"](http://shrtcts.es/): un libro sobre Atajos en iOS 12 de los fundadores de la comunidad, [@frankisok](https://t.me/frankisok), [@rafaelroa](https://t.me/rafaelroa) y [@joseruig](https://t.me/joseruig)
@@ -10,7 +12,7 @@ Por ahora esto está bastante vacío. Para empezar, algunos enlaces interesantes
 * Los mejores atajos creados por la comunidad de [@shortcuts_es](https://t.me/shortcuts_es) se publican en [@reposhortcuts_es](https://t.me/reposhortcuts_es).
 * [@joercha](https://t.me/joercha) (el usuario con mejor _karma_ de la comunidad :grin:) recopila los mejores atajos que encuentra a lo largo y ancho de Internet en otro canal de Telegram: [@TodoAtajos](https://t.me/TodoAtajos)
 
-Enlaces en inglés:
+Más enlaces interesantes, pero en inglés:
 * <https://routinehub.co/> - La mayor colección atajos, organizados por categorías, explicados con detalle, donde puedes hacerte tu lista de favoritos, y enviar comentarios a los autores de los atajos
 * <https://shortcutsgallery.com/> - Otra colección de atajos por categorías
 * <https://www.reddit.com/r/shortcuts/> - Subreddit dedicado a los atajos de iOS, que incluye entre sus usuarios a algunos de los creadores de Atajos
