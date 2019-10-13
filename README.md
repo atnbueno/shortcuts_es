@@ -2,7 +2,7 @@
 
 El propósito de este repositorio es recoger información en español sobre los atajos ("shortcuts") de iOS. Se ha formado una comunidad bastante decente de usuarios aprendiendo y enseñando sobre atajos en el grupo de Telegram [@shortcuts_es](https://t.me/shortcuts_es). Pese a lo utilísimo que es Telegram, a veces se echa en falta un sitio donde recoger enlaces y ficheros relacionados, y de ahí este repositorio.
 
-Por ahora esto está bastante vacío, pero ya lo iremos llenando. Para empezar, repasa nuestra [FAQ](FAQ.md).
+Por ahora esto está bastante vacío, pero ya lo iremos llenando. Para empezar, repasa nuestra [FAQ](FAQ/preguntas-frecuentes.md).
 
 Luego te pueden interesar algunos de estos enlaces:
 
