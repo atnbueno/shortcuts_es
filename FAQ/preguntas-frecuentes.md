@@ -28,11 +28,11 @@ Atajos es una aplicación cada vez más potente que puede serte muy útil, pero 
 
 Por eso es habitual buscar atajos en webs o en [grupos de Telegram como el nuestro](https://t.me/shortcuts_es/), donde son los usuarios los que comparten sus atajos. Pero la primera vez que intentas instalar un atajo compartido te aparece este mensaje:
 
-![Este atajo no se puede abrir porque tus ajustes de seguridad de Atajos no permiten atajos que no sean de confianza.](https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/no-se-puede-abrir-atajo.png)
+<p align="center"><img alt="" title="Este atajo no se puede abrir porque tus ajustes de seguridad de Atajos no permiten atajos que no sean de confianza" src="https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/no-se-puede-abrir-atajo.png"></p>
 
 Afortunadamente esto tiene fácil arreglo: Una vez pulses "OK", ve a Ajustes → Atajos, y la ultima opción será la de permitir atajos no fiables. Al activarla **se te pedirá el PIN de tu dispositivo** para confirmar el cambio. 
 
-![Opción "Permitir atajos no fiables"](https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/permitir-atajos-no-fiables.png)
+<p align="center"><img alt="" title="Opción "Permitir atajos no fiables" src="https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/permitir-atajos-no-fiables.png"></p>
 
 Si esa opción no te aparece, ve a la Galería de la app Atajos, y baja y ejecuta cualquiera de esos atajos. Vuelve a continuación a Ajustes y la opción de "Permitir atajos no fiables" estará disponible.
 
@@ -52,6 +52,6 @@ El primer sitio, y el más seguro, es la Galería oficial de la app Atajos. Todo
 
 En la [portada del repositorio de la comunidad](https://github.com/atnbueno/shortcuts_es) se listan sitios, tanto en español como en inglés, donde puedes encontrar atajos. Eso sí, recuerda revisar lo que hacen antes de instalarlos en tu dispositivo y ejecutarlos.
 
-A propósito de atajos externos, [la primera vez probablemente te aparecerá un mensaje avisando de que no se pueden abrir](https://feathub.com/atnbueno/shortcuts_es/+4).
+A propósito de atajos externos, [la primera vez probablemente te aparecerá un mensaje avisando de que no se pueden abrir](https://github.com/atnbueno/shortcuts_es/blob/master/FAQ/preguntas-frecuentes.md#como-instalo-atajos-externos-me-sale-un-mensaje-avisando-de-que-no-se-pueden-abrir).
 
-[![Este atajo no se puede abrir porque tus ajustes de seguridad de Atajos no permiten atajos que no sean de confianza.](https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/no-se-puede-abrir-atajo.png)](https://feathub.com/atnbueno/shortcuts_es/+4)
+<p align="center"><img alt="" title="Este atajo no se puede abrir porque tus ajustes de seguridad de Atajos no permiten atajos que no sean de confianza." src="https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/no-se-puede-abrir-atajo.png"></p>
