@@ -32,7 +32,7 @@ Por eso es habitual buscar atajos en webs o en [grupos de Telegram como el nuest
 
 Afortunadamente esto tiene fácil arreglo: Una vez pulses "OK", ve a Ajustes → Atajos, y la ultima opción será la de permitir atajos no fiables. Al activarla **se te pedirá el PIN de tu dispositivo** para confirmar el cambio. 
 
-<p align="center"><img alt="" title="Opción "Permitir atajos no fiables" src="https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/permitir-atajos-no-fiables.png"></p>
+<p align="center"><img alt="" title="Opción &quot;Permitir atajos no fiables&quot; src="https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/permitir-atajos-no-fiables.png"></p>
 
 Si esa opción no te aparece, ve a la Galería de la app Atajos, y baja y ejecuta cualquiera de esos atajos. Vuelve a continuación a Ajustes y la opción de "Permitir atajos no fiables" estará disponible.
 
