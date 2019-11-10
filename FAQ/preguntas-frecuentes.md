@@ -32,7 +32,7 @@ Por eso es habitual buscar atajos en webs o en [grupos de Telegram como el nuest
 
 Afortunadamente esto tiene fácil arreglo: Una vez pulses "OK", ve a Ajustes → Atajos, y la ultima opción será la de permitir atajos no fiables. Al activarla **se te pedirá el PIN de tu dispositivo** para confirmar el cambio. 
 
-<p align="center"><img alt="" title="Opción &quot;Permitir atajos no fiables&quot; src="https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/permitir-atajos-no-fiables.png"></p>
+<p align="center"><img alt="" title="Opción &quot;Permitir atajos no fiables&quot;" src="https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/permitir-atajos-no-fiables.png"></p>
 
 Si esa opción no te aparece, ve a la Galería de la app Atajos, y baja y ejecuta cualquiera de esos atajos. Vuelve a continuación a Ajustes y la opción de "Permitir atajos no fiables" estará disponible.
 
@@ -55,3 +55,11 @@ En la [portada del repositorio de la comunidad](https://github.com/atnbueno/shor
 A propósito de atajos externos, [la primera vez probablemente te aparecerá un mensaje avisando de que no se pueden abrir](https://github.com/atnbueno/shortcuts_es/blob/master/FAQ/preguntas-frecuentes.md#como-instalo-atajos-externos-me-sale-un-mensaje-avisando-de-que-no-se-pueden-abrir).
 
 <p align="center"><img alt="" title="Este atajo no se puede abrir porque tus ajustes de seguridad de Atajos no permiten atajos que no sean de confianza." src="https://raw.githubusercontent.com/atnbueno/shortcuts_es/master/FAQ/no-se-puede-abrir-atajo.png"></p>
+
+### ¿Puedo programar el envío de mensajes vía WhatsApp?
+
+Con la acción "Enviar mensaje con WhatsApp" a lo más que puedes llegar es a que se abra la conversación indicada en WhatsApp y el texto deseado aparezca ya escrito, pero el envío lo tendrás que hacer tú a mano.
+
+Otra posibilidad es que Siri te sugiera _reenviar_ un mensaje previamente enviado, por lo que no podrás cambiar ni el texto no el destinatario. Eso lo podrás hacer automáticamente, sin intervención del usuario, pero ten en cuenta que Siri es bastante caprichosa en cuanto a las sugerencias. No es consistente de un usuario a otro.
+
+Y si por "programar el envío" quieres decir a una cierta hora, o al salir o llegar a un sitio, sin intervención tuya, eso tampoco es posible ([te aparecerá una notificación que tienes que pulsar para confirmar la ejecución del atajo](https://github.com/atnbueno/shortcuts_es/blob/master/FAQ/preguntas-frecuentes.md#como-evitar-las-notificaciones-de-las-nuevas-automatizaciones-de-ios-13)).
