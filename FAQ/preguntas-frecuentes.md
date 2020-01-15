@@ -4,13 +4,15 @@
 
 ¡Ésta es la pregunta más frecuente con diferencia!
 
-Conocemos tres atajos para descargar multimedia de múltiples redes sociales. No se han hecho en nuestra comunidad, así que no preguntes por qué han dejado de funcionar, o si hay nuevas versiones. Ésta es toda la información de la que disponemos:
+Conocemos cuatro atajos para descargar multimedia de múltiples redes sociales. No se han hecho en nuestra comunidad, así que no preguntes por qué han dejado de funcionar, o si hay nuevas versiones. Ésta es toda la información de la que disponemos:
 
 - **Social Media Downloader (SMD)**: Se suele encontrar la [última versión en Reddit](https://www.reddit.com/r/shortcuts/search/?q=SMD&restrict_sr=1) (la 4.0.2 es compatible con iOS 13)
 
 - **Media Grabber (MG)**: Aunque también aparece por Reddit, su origen es el grupo de Telegram [@ShortcutsApps](https://t.me/ShortcutsApps), su autor es el usuario [@sayem314](https://t.me/sayem314), y hay una [versión para iOS 12](https://kutt.it/mgsc) y una [version beta para iOS 13](https://kutt.it/mg140b4). También hay un [repositorio en GitHub](https://github.com/MediaGrabber/iOS-Workflow) asociado.
 
-- **Media Mutt**: Actualizado recientemente para iOS 13, está [disponible en RoutineHub](https://routinehub.co/shortcut/3184). Por defecto soporta vídeos de YouTube, posts de Instagram, Reddit y Tumblr, e imágenes de Imgur y Gfycat, pero hay [extensiones](https://routinehub.co/search/?q=go+fetch+from) para vídeos de Dailymotion, perfiles de Instagram y posts de Facebook y Vero. Un detalle importante es que no depende de servidores externos como los otros dos, por lo que dejará de funcionar menos frecuentemente.
+- **R⤓Download**: Encontrado también en t.me/ShortcutsApps, su autor es [@r07qxo](https://t.me/r07qxo) en Telegram y Twitter. Al [instalar R⤓Download](https://www.icloud.com/shortcuts/266b15300f0a4ecd9843ecb14486c20b) puedes ignorar la pregunta de importación.
+
+- **Media Mutt**: [Disponible en RoutineHub](https://routinehub.co/shortcut/3184). Por defecto soporta vídeos de YouTube, posts de Instagram, Reddit y Tumblr, e imágenes de Imgur y Gfycat, pero hay [extensiones](https://routinehub.co/search/?q=go+fetch+from) para vídeos de Dailymotion, perfiles de Instagram y posts de Facebook y Vero. Un detalle importante es que no depende de servidores externos como los otros tres, por lo que dejará de funcionar menos frecuentemente.
 
 ### ¿Como evitar las notificaciones de las nuevas automatizaciones de iOS 13?
 
