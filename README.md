@@ -21,7 +21,7 @@ Más enlaces interesantes, pero en inglés:
 * <https://www.matthewcassinelli.com/siri-shortcuts/> - Colección de atajos de [Matthew Cassinelli](https://twitter.com/mattcassinelli/), uno de los evangelistas sobre atajos más importantes
 * <https://www.macstories.net/shortcuts/> - Colección de atajos de [Federico Viticci](https://twitter.com/viticci), otro enorme evangelista de Atajos. Vittici publicó el 1 de octubre de 2019 una lista de [enlaces a Ajustes](https://www.macstories.net/ios/a-comprehensive-guide-to-all-120-settings-urls-supported-by-ios-and-ipados-13-1/) que puedes utilizar en tus atajos. También de Viticci es la _review_ de iOS 13 más exhaustiva que existe. De particular interés es la [sección dedicada a Atajos](https://www.macstories.net/stories/ios-and-ipados-13-the-macstories-review/13/#shortcuts).
 * <https://shortcutsweb.app/> - Editor web de atajos (formato gráfico)
-* <https://editor.scpl.dev/> - Editor web de atajos (formato texto, lenguaje "ScPL")
+* <https://editor.scpl.dev/> - Editor web de atajos (formato texto, lenguaje "ScPL", ejemplos en la subcarpeta [ScPL](ScPL/))
 
 Para acabar, enlaces con información técnica, también en inglés:
 * <http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax> - Todo lo que se puede obtener con formato personalizado de fecha y hora
