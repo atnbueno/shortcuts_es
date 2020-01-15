@@ -31,6 +31,7 @@ Apps que complementan la app oficial (en inglés si no se dice otra cosa):
 * [**Shortcutify**](https://shortcutify.app/) - Integración y automatizaciones con servicios como Spotify, Airtable o Google Maps (también [en beta](https://testflight.apple.com/join/eAO3C5kM))
 * [**PushCut**](https://www.pushcut.io/) - Notificaciones para atajos y HomeKit ([Subscripción de 1-2€/mes](https://apps.apple.com/es/app/id1450936447), o gratuita pero muy limitada). [Comentada en HomeKit Hero](https://homekithero.com/2019/10/27/pushcut-app-review/) en inglés.
 * [**LaunchCuts**](https://launchcuts.com/) - Lanzador y organizador de atajos ([9€](https://apps.apple.com/es/app/launchcuts/id1489780246)). [Comentada por Viticci](https://www.macstories.net/reviews/launchcuts-review-a-better-way-to-organize-your-shortcuts-with-folders-advanced-search-and-custom-views/) en inglés.
+* [**Shorcutor**](https://shortcutor.com/) - Editor gráfico de atajos para Windows/macOS/Linux ([Subscripción de 4-5€/mes](https://shortcutor.com/buy.html))
 
 Para acabar, enlaces con información técnica, también en inglés:
 * <http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax> - Todo lo que se puede obtener con formato personalizado de fecha y hora
