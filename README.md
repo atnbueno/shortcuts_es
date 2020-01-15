@@ -23,6 +23,15 @@ Más enlaces interesantes, pero en inglés:
 * <https://shortcutsweb.app/> - Editor web de atajos (formato gráfico)
 * <https://editor.scpl.dev/> - Editor web de atajos (formato texto, lenguaje "ScPL", ejemplos en la subcarpeta [ScPL](ScPL/))
 
+Apps que complementan la app oficial (en inglés si no se dice otra cosa):
+* [**Jayson**](https://jayson.app/) - Visualizador de datos en formato JSON (en español y [gratuita](https://apps.apple.com/es/app/jayson/id1447750768)), aunque alguna funcionalidad secundaria cuesta 2,30€). [Comentada por Viticci](https://www.macstories.net/reviews/inspecting-json-files-on-ios-with-jayson/) en inglés.
+* [**Scriptable**](https://scriptable.app/) - Ejecución de scripts programados en JavaScript ([gratuita](https://apps.apple.com/es/app/id1405459188) con posibilidad de propina)
+* [**Toolbox Pro**](https://www.macstories.net/reviews/toolbox-pro-review-a-must-have-companion-utility-for-shortcuts-power-users/) - Añade nuevas acciones, gratuitas y de pago, a la app original ([7€ en España](https://apps.apple.com/es/app/toolbox-pro-for-shortcuts/id1476205977) más propinas, pero sólo por las acciones gratuitas ya es útil). [Comentada por Viticci](https://www.macstories.net/reviews/toolbox-pro-review-a-must-have-companion-utility-for-shortcuts-power-users/) en inglés.
+* **Data Jar** - Un almacén de datos para tus atajos (aun [en beta](https://testflight.apple.com/join/eAO3C5kM))
+* **Shortcutify** - Integración y automatizaciones con servicios como Spotify, Airtable o Google Maps (también [en beta](https://testflight.apple.com/join/eAO3C5kM))
+* [**PushCut**](https://www.pushcut.io/) - Notificaciones para atajos y HomeKit ([Subscripción de 1-2€/mes](https://apps.apple.com/es/app/id1450936447), o gratuita pero muy limitada). [Comentada en HomeKit Hero](https://homekithero.com/2019/10/27/pushcut-app-review/) en inglés.
+* [**LaunchCuts**](https://launchcuts.com/) - Lanzador y organizador de atajos ([9€ en España](https://apps.apple.com/es/app/launchcuts/id1489780246)). [Comentada por Viticci](https://www.macstories.net/reviews/launchcuts-review-a-better-way-to-organize-your-shortcuts-with-folders-advanced-search-and-custom-views/) en inglés.
+
 Para acabar, enlaces con información técnica, también en inglés:
 * <http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax> - Todo lo que se puede obtener con formato personalizado de fecha y hora
 * <http://userguide.icu-project.org/strings/regexp> - La variante específica de expresiones regulares (_regex_) que se puede usar en Atajos, muy parecida a PCRE, pero con sutiles diferencias
