@@ -1,0 +1,123 @@
+@Icon font
+@Color green
+@ShowInShareSheet [string]
+
+Comment
+| This shortcut transforms a text input into a similar string build with Unicode symbols that resemble different typefaces. They can be used to simulate having different fonts where only plain text is available. By default it offers 15 font variants (which are easy to delete or add), and the final result is shown to the user before it can be copied. AFAIK it is the first such tool that does this while keeping diacritics. — @atnbueno (2019-02-10)
+|
+| v1.3.0: Refactorized in ScPL. Added support for UpdateHub. — @atnbueno (2020-01-16)
+|
+| RoutineHubUpdate
+|
+| Current Version: "1.3.0"
+| RoutineHub ID: "4268"
+|
+| RoutineHubUpdate
+
+//GetTextfromInput
+Count Characters
+If input="Is Greater Than" number=0
+	Comment
+	|Text received, so make it the output of the "If" action
+	GetVariable s:shortcutinput
+Otherwise
+	Comment
+	| No text received, so ask the user for the text to transform
+	|
+	| Input example: Mañana Voilà Château Fraülein Café Façade
+	AskforInput question="Enter text to transform"
+End -> v:"Input Text"
+
+Comment
+| These are the predefined variants. Delete any you don't like except the "Plain Text" one. To add your own variant, add a new text value to the dictionary with your replacement for the ten digits, the space, the 26 uppercase letters, and the 26 lowercase letters, in that order.
+Dictionary {"Plain Text": "0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz", Calligraphy: "0123456789 𝒜ℬ𝒞𝒟ℰℱ𝒢ℋℐ𝒥𝒦ℒℳ𝒩𝒪𝒫𝒬ℛ𝒮𝒯𝒰𝒱𝒲𝒳𝒴𝒵𝒶𝒷𝒸𝒹ℯ𝒻ℊ𝒽𝒾𝒿𝓀𝓁𝓂𝓃ℴ𝓅𝓆𝓇𝓈𝓉𝓊𝓋𝓌𝓍𝓎𝓏", "Calligraphy Bold": "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗 𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃", "Double-struck": "𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡 𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫", Fraktur: "0123456789 𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷", "Fraktur Bold": "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗 𝕬𝕭𝕮𝕯𝕰𝕱𝕲𝕳𝕴𝕵𝕶𝕷𝕸𝕹𝕺𝕻𝕼𝕽𝕾𝕿𝖀𝖁𝖂𝖃𝖄𝖅𝖆𝖇𝖈𝖉𝖊𝖋𝖌𝖍𝖎𝖏𝖐𝖑𝖒𝖓𝖔𝖕𝖖𝖗𝖘𝖙𝖚𝖛𝖜𝖝𝖞𝖟", Fullwidth: "０１２３４５６７８９ ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ", Monospace: "𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿 𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣", "Sans-serif": "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫 𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸𝖹𝖺𝖻𝖼𝖽𝖾𝖿𝗀𝗁𝗂𝗃𝗄𝗅𝗆𝗇𝗈𝗉𝗊𝗋𝗌𝗍𝗎𝗏𝗐𝗑𝗒𝗓", "Sans-serif Bold": "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵 𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇", "Sans-serif Italic": "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫 𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻", "Sans-serif Bold Italic": "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵 𝘼𝘽𝘾𝘿𝙀𝙁𝙂𝙃𝙄𝙅𝙆𝙇𝙈𝙉𝙊𝙋𝙌𝙍𝙎𝙏𝙐𝙑𝙒𝙓𝙔𝙕𝙖𝙗𝙘𝙙𝙚𝙛𝙜𝙝𝙞𝙟𝙠𝙡𝙢𝙣𝙤𝙥𝙦𝙧𝙨𝙩𝙪𝙫𝙬𝙭𝙮𝙯", "Sans-serif Small Caps": "𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫 𝖠𝖡𝖢𝖣𝖤𝖥𝖦𝖧𝖨𝖩𝖪𝖫𝖬𝖭𝖮𝖯𝖰𝖱𝖲𝖳𝖴𝖵𝖶𝖷𝖸Zᴀʙᴄᴅᴇғɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ", "Serif Bold": "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗 𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳", "Serif Italic": "0123456789 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻𝐼𝐽𝐾𝐿𝑀𝑁𝑂𝑃𝑄𝑅𝑆𝑇𝑈𝑉𝑊𝑋𝑌𝑍𝑎𝑏𝑐𝑑𝑒𝑓𝑔ℎ𝑖𝑗𝑘𝑙𝑚𝑛𝑜𝑝𝑞𝑟𝑠𝑡𝑢𝑣𝑤𝑥𝑦𝑧", "Serif Bold Italic": "𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗 𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛"} -> v:Charsets
+
+Comment "The following JavaScript snippet applies each charset to the text input, BUT keeping the diacritics (although their placement may not be perfect), and its output is a JSON string, very similar to the dictionary above, but with the user's text replacing the charsets"
+Text -> v:JavaScript
+| ; let text = `\(v:"Input Text")`.replace(/\\u2060/g, "") // ignores/omits WJ (see about rendering bugs below)
+| ; text = text.normalize("NFD") // see https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/String/normalize
+| ; text = [...text] // see https://ponyfoo.com/articles/es6-strings-and-unicode-in-depth#unicode
+| 
+| ; // Charset sources: https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols, https://www.compart.com/unicode/
+| ; let charsets = \(v:Charsets)
+| 
+| ; // Search each character in all the charsets and, if found, encode it as its position
+| ; let codes = []
+| ; for (let c of text) {
+| ;     let code = -1; // -1 == not found, leave as is
+| ;     for (let i = 0, keys = Object.keys(charsets); (i < keys.length) && (code < 0); i++) {
+| ;         code = [...charsets[keys[i]]].indexOf(c)
+| ;     }
+| ;     codes.push(code)
+| ; }
+| 
+| ; // Transforms the text with each charset (including the "Plain Text" charset in case of transformation undoing)
+| ; let output = {}
+| ; for (let i = 0, keys = Object.keys(charsets); i < keys.length; i++) {
+| ;     let charset = [...charsets[keys[i]]]
+| ;     let newText = ""
+| ;     for (let j = 0; j < codes.length; j++) {
+| ;         let c = charsets["Plain Text"][codes[j]] // The "Plain Text" charset is the reference
+| 
+| ;         // Weird iOS Unicode rendering bug with "Sans-serif Small Caps" (solved)
+| ;         let prefix = ""
+| ;         if ((keys[i] == "Sans-serif Small Caps") && ("aeu".indexOf(c) >= 0)) {
+| ;             // Adds a WJ prefix to "a", "e" & "u" to avoid them turning to serif
+| ;             prefix = "\\u2060"
+| ;         }
+| ;         // TO DO: Look for solution to avoid "Sans-serif Small Caps" and "Fullwidth" word breaking
+| 
+| ;         // Weird iOS Unicode rendering bugs with "Calligraphy" (unsolved, only mitigated)
+| ;         let suffix = ""
+| ;         if ((keys[i] == "Calligraphy") && ("BEFHILMR".indexOf(c) >= 0)) {
+| ;             // Adds a WJ suffix to some letters to mitigate weird rendering of "e", "g" & "o"
+| ;             suffix = "\\u2060"
+| ;         }
+| ;         // TO DO: Look for solution to "e", "g" & "o" after space, "BEFHILMR" or themselves
+| ;         // TO DO: Look for solution to characters in "BEFHILMR" after non-calligraphic character
+| 
+| ;         // Replaces each character by their equivalent in each charset
+| ;         if (codes[j] < 0) {
+| ;             newText += text[j] // non-charset characters
+| ;         } else {
+| ;             newText += prefix + charset[codes[j]] + suffix
+| ;         }
+| ;     }
+| 
+| ;     // Adds transformation to the output array
+| ;     output[keys[i]] = newText
+| ; }
+| 
+| ; // Output in JSON format
+| ; document.write(JSON.stringify(output))
+Comment "The JavaScript code is run and it's output is converted to a Shortcuts dictionary, then the user is shown all their text available variants, and asked to pick one"
+URL "data:text/html;charset=utf-8,<script>\(v:JavaScript)</script>"
+GetFileofType "com.apple.webarchive"
+GetTextfromInput
+GetDictionaryfromInput -> v:"Text Variants"
+
+Comment "The list of text variants shown to the user is a list of vCards, instead of the original dictionary, to ensure the order shown is always the same. If any variant coincides with the input text, it will be omitted from the list."
+GetVariable v:Charsets
+GetDictionaryValue get="All Keys"
+RepeatwithEach
+	GetVariable v:"Text Variants"
+	GetDictionaryValue key=v:"Repeat Item" -> v:"Text Variant"
+	If input=Equals value=v:"Input Text"
+		Nothing
+	Otherwise
+		GetVariable v:"Text Variant"
+		Comment "As indicated by the RFC 2426 standard, line breaks and semicolons must be escaped"
+		ReplaceText findText="\\n" replaceWith="\\\\n" caseSensitive=false regularExpression=true
+		ReplaceText findText=";" replaceWith="\\;" caseSensitive=false -> mv:"Replace Text"
+		Text "BEGIN:VCARD\nVERSION:3.0\nN;CHARSET=utf-8:\(mv:"Replace Text")\nORG;CHARSET=utf-8:\(v:"Repeat Item")\nEND:VCARD"
+	End
+End
+CombineText separator="New Lines"
+SetName name="menu.vcf" -> mv:"Set Name"
+Comment "The combined and renamed text is interpreted as Contacts and shown as a menu to the user"
+GetVariable mv:"Set Name"{as:contact}
+ChoosefromList prompt="Choose your text variant" -> v:"Selected Variant"
+Comment "The name of the selected variant is the transformed text chosen by the user. The user is shown the final result and given the option to copy it to the clipboard."
+ShowAlert title="Your Text Variant" message="\n\(v:"Selected Variant"{as:contact,get:name})\n\nDo you want to copy it to the iOS Universal Clipboard?" showCancelButton=true
+GetVariable v:"Selected Variant"{as:contact,get:name}
+CopytoClipboard localOnly=false
