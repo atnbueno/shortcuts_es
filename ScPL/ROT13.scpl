@@ -12,7 +12,7 @@ Comment
 |
 | RoutineHubUpdate
 |
-| Current Version: "1.3.0"
+| Current Version: "1.3.1"
 | RoutineHub ID: "4313"
 |
 | RoutineHubUpdate
@@ -44,7 +44,7 @@ Comment
 |
 | As long as there is more than one encoding, the user will be asked to select one of them.
 
-Dictionary {ROT5: {"0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4"}, ROT13: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m}, ROT18: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m, "0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4"}, ROT47: {"!": P, "\"": Q, "#": R, "$": S, "%": T, "&": U, "'": V, "(": W, ")": X, "*": Y, "+": Z, ",": "[", "-": "\\", ".": "]", "/": "^", "0": _, "1": "`", "2": a, "3": b, "4": c, "5": d, "6": e, "7": f, "8": g, "9": h, ":": i, ";": j, "<": k, "=": l, ">": m, "?": n, "@": o, A: p, B: q, C: r, D: s, E: t, F: u, G: v, H: w, I: x, J: y, K: z, L: "{", M: "|", N: "}", O: "~", P: "!", Q: "\"", R: "#", S: "$", T: "%", U: "&", V: "'", W: "(", X: ")", Y: "*", Z: "+", "[": ",", "\\": "-", "]": ".", "^": "/", _: "0", "`": "1", a: "2", b: "3", c: "4", d: "5", e: "6", f: "7", g: "8", h: "9", i: ":", j: ";", k: "<", l: "=", m: ">", n: "?", o: "@", p: A, q: B, r: C, s: D, t: E, u: F, v: G, w: H, x: I, y: J, z: K, "{": L, "|": M, "}": N, "~": O}} -> v:Encodings
+Dictionary {ROT5: {"0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4", ".": "."}, ROT13: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m, ".": "."}, ROT18: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m, "0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4", ".": "."}, ROT47: {"!": P, "\"": Q, "#": R, "$": S, "%": T, "&": U, "'": V, "(": W, ")": X, "*": Y, "+": Z, ",": "[", "-": "\\", ".": "]", "/": "^", "0": _, "1": "`", "2": a, "3": b, "4": c, "5": d, "6": e, "7": f, "8": g, "9": h, ":": i, ";": j, "<": k, "=": l, ">": m, "?": n, "@": o, A: p, B: q, C: r, D: s, E: t, F: u, G: v, H: w, I: x, J: y, K: z, L: "{", M: "|", N: "}", O: "~", P: "!", Q: "\"", R: "#", S: "$", T: "%", U: "&", V: "'", W: "(", X: ")", Y: "*", Z: "+", "[": ",", "\\": "-", "]": ".", "^": "/", _: "0", "`": "1", a: "2", b: "3", c: "4", d: "5", e: "6", f: "7", g: "8", h: "9", i: ":", j: ";", k: "<", l: "=", m: ">", n: "?", o: "@", p: A, q: B, r: C, s: D, t: E, u: F, v: G, w: H, x: I, y: J, z: K, "{": L, "|": M, "}": N, "~": O}} -> v:Encodings
 
 GetDictionaryValue get="All Keys" -> mv:"All Keys"
 Count Items
@@ -52,6 +52,7 @@ If input="Is Greater Than" number=1
 	GetVariable v:Encodings
 	ChoosefromList prompt="Encoding to use?"
 Otherwise
+	GetVariable v:Encodings
 	GetDictionaryValue key=mv:"All Keys"
 End -> v:Encoding
 
