@@ -1,81 +1,60 @@
 @ShowInShareSheet [string]
-@ShowInWidget false
 @Icon mask
 @Color orange
 
 Comment
 | This started as a quick and dirty implementation of ROT13, the text-scrambling cypher¹ that it's its own inverse. It is typically used online to hide information from a casual glance (spoilers, punchlines, puzzle solutions...).
 |
-| With a bit of extra work, now it also does ROT5 (only digits), ROT18 (letters and digits), and ROT47 (using all the printable ASCII). Oh, and it also keeps diacritics thanks to a pinch of JavaScript magic. — @atnbueno (2020-01-15)
+| Now it also does ROT5 (only digits), ROT18 (letters and digits), and ROT47 (using all the printable ASCII). And, thanks to Javascript, it's 10-100 faster than the original, supports diacritics, and can rotate really long text without crashing. — @atnbueno (2020-01-25)
 |
 | (¹) See https://en.wikipedia.org/wiki/ROT13 for details
 |
 | RoutineHubUpdate
 |
-| Current Version: "1.3.1"
+| Current Version: "2.0.0"
 | RoutineHub ID: "4313"
 |
 | RoutineHubUpdate
-
-Comment
-| By default the shortcut converts whatever text is shared with it. If the shortcut receives no input, the user will be asked for it, while being offered the contents of the clipboard as initial text.
-Count Items
-If input=Equals number=0
-	AskforInput question="Text to ROTate?" defaultAnswer=s:clipboard
-Otherwise
-	GetVariable s:shortcutinput
-End -> v:"Text to ROTate"
-
-Comment
-| This JavaScript snippet separates letters from their diacritics (if any), and then divides the text by each character. Before supporting diacritics, this was done with a simple "Split Text" action with the "Every Character" separator.
-
-Text -> v:JavaScript
-| let text = `\(v:"Text to ROTate")`.normalize("NFD"); // assuming text does not contain backticks
-| document.write(JSON.stringify({"chars":[...text]}));
-URL "data:text/html;charset=utf-8,<script>\(v:JavaScript)</script>"
-GetFileofType "com.apple.webarchive"
-GetTextfromInput
-GetDictionaryValue key=chars -> v:"Chars to ROTate"
 
 Comment 
 | The two-level dictionary below contains the substitutions of the four encodings offered.
 |
 | If you don't want any of them, delete the corresponding entry in the first level of the dictionary.
 |
-| As long as there is more than one encoding, the user will be asked to select one of them.
+| As long as there is more than one encoding, the user will be asked to select one of the outputs.
+Dictionary {ROT47: {"!": P, "\"": Q, "#": R, "$": S, "%": T, "&": U, "'": V, "(": W, ")": X, "*": Y, "+": Z, ",": "[", "-": "\\", ".": "]", "/": "^", "0": _, "1": "`", "2": a, "3": b, "4": c, "5": d, "6": e, "7": f, "8": g, "9": h, ":": i, ";": j, "<": k, "=": l, ">": m, "?": n, "@": o, A: p, B: q, C: r, D: s, E: t, F: u, G: v, H: w, I: x, J: y, K: z, L: "{", M: "|", N: "}", O: "~", P: "!", Q: "\"", R: "#", S: "$", T: "%", U: "&", V: "'", W: "(", X: ")", Y: "*", Z: "+", "[": ",", "\\": "-", "]": ".", "^": "/", _: "0", "`": "1", a: "2", b: "3", c: "4", d: "5", e: "6", f: "7", g: "8", h: "9", i: ":", j: ";", k: "<", l: "=", m: ">", n: "?", o: "@", p: A, q: B, r: C, s: D, t: E, u: F, v: G, w: H, x: I, y: J, z: K, "{": L, "|": M, "}": N, "~": O}, ROT18: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m, "0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4"}, ROT13: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m}, ROT5: {"0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4"}} -> v:Encodings
 
-Dictionary {ROT5: {"0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4", ".": "."}, ROT13: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m, ".": "."}, ROT18: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m, "0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4", ".": "."}, ROT47: {"!": P, "\"": Q, "#": R, "$": S, "%": T, "&": U, "'": V, "(": W, ")": X, "*": Y, "+": Z, ",": "[", "-": "\\", ".": "]", "/": "^", "0": _, "1": "`", "2": a, "3": b, "4": c, "5": d, "6": e, "7": f, "8": g, "9": h, ":": i, ";": j, "<": k, "=": l, ">": m, "?": n, "@": o, A: p, B: q, C: r, D: s, E: t, F: u, G: v, H: w, I: x, J: y, K: z, L: "{", M: "|", N: "}", O: "~", P: "!", Q: "\"", R: "#", S: "$", T: "%", U: "&", V: "'", W: "(", X: ")", Y: "*", Z: "+", "[": ",", "\\": "-", "]": ".", "^": "/", _: "0", "`": "1", a: "2", b: "3", c: "4", d: "5", e: "6", f: "7", g: "8", h: "9", i: ":", j: ";", k: "<", l: "=", m: ">", n: "?", o: "@", p: A, q: B, r: C, s: D, t: E, u: F, v: G, w: H, x: I, y: J, z: K, "{": L, "|": M, "}": N, "~": O}} -> v:Encodings
+Comment
+| By default the shortcut converts whatever text is shared with it. If the shortcut receives no input, the user will be asked for it, while being offered the contents of the clipboard as initial text.
+GetVariable s:ShortcutInput
+Count Items
+If input=Equals number=0 value=0
+	AskforInput question="Text to ROTate?" defaultAnswer=s:Clipboard
+Otherwise
+	GetVariable s:ShortcutInput
+End -> v:"Text to ROTate"
 
-GetDictionaryValue get="All Keys" -> mv:"All Keys"
+Comment
+| This JavaScript snippet does all the hard work, and it's so fast that it can apply all the encodings in a fraction of the time it took the original no-javascript shortcut to apply just one of them. Now the user can select the encoding while seeing the result 😄
+Text -> v:JavaScript
+| let encodings = \(v:Encodings);
+| let text = `\(v:"Text to ROTate")`.normalize("NFD");
+| Object.keys(encodings).forEach(encoding=>{encodings[encoding] = text.split("").map(char=>encodings[encoding][char]||char).join("")});
+| document.write(JSON.stringify(encodings));
+URL "data:text/html;charset=utf-8,<script>\(v:JavaScript)</script>"
+GetFileofType "com.apple.webarchive"
+GetTextfromInput
+GetDictionaryfromInput -> v:Encodings
+
+Comment
+| As mentioned before, if there is more than one encoding, the user will be asked to select which output to copy
+GetDictionaryValue get="All Keys"
 Count Items
 If input="Is Greater Than" number=1
 	GetVariable v:Encodings
-	ChoosefromList prompt="Encoding to use?"
+	ChoosefromList prompt="Select which output to copy"
 Otherwise
 	GetVariable v:Encodings
-	GetDictionaryValue key=mv:"All Keys"
+	GetDictionaryValue get="All Values"
 End -> v:Encoding
-
-Comment 
-| Once the encoding is decided, the shortcut iterates on the input characters, replacing them if they appear in the substitutions
-
-GetVariable v:"Chars to ROTate"
-RepeatwithEach
-	GetVariable v:Encoding
-	GetDictionaryValue key=v:"Repeat Item" -> mv:Substitution
-	Count Characters
-	If input=Equals value=1
-		GetVariable mv:Substitution
-	Otherwise
-		GetVariable v:"Repeat Item"
-	End
-End
-
-Comment
-| The output of the iteration is then combined in a string, which is copied to the clipboard with the user's ok.
-|
-| Deleting the "Show Alert" action below will make the shortcut more straightforward, at the expense of the output preview.
-
-CombineText separator=Custom -> mv:"ROTated text"
-ShowAlert title="ROTated text" message="\n\(mv:"ROTated text")\n\nCopy to the clipboard?"
 CopytoClipboard
