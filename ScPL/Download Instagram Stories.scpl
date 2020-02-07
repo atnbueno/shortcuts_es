@@ -10,7 +10,7 @@ Comment
 |
 | RoutineHubUpdate
 | 
-| Current Version: "1.1.1"
+| Current Version: "1.1.2"
 | RoutineHub ID: "4270"
 |
 | RoutineHubUpdate
@@ -25,13 +25,12 @@ Otherwise
 End
 
 Comment "Clean up the input to get the username"
-ReplaceText findText="https://www.instagram.com/([^/]+)" replaceWith="$1" caseSensitive=false regularExpression=true
+ReplaceText findText="(?:https://(?:www\\.)?instagram\\.com/)?([^/?]+)([/?].*)?" replaceWith="$1" caseSensitive=false regularExpression=true
 ReplaceText findText="[^\\w.]" caseSensitive=false regularExpression=true
 ChangeCase lowercase
 SetVariable Username
 
 Comment "The shortcut will download the files of the indicated user in a subfolder of iCloud Drive/Shortcuts/\(@:ServiceName)/"
-CreateFolder path="\(@:ServiceName)/\(v:Username)"
 URL "\(@:ServicePrefix)\(v:Username)"
 GetContentsofURL advanced=false
 
@@ -68,6 +67,7 @@ Comment "Notify the user of what has been found"
 If input="Is Greater Than" number=0
 	Comment "Ask the user if he wants to download the files, reminding where they will be saved"
 	ShowAlert title=@:ServiceName message="\(mv:Count) files have been found\n\nDo you want to download them to /Shortcuts/\(@:ServiceName)/\(v:Username)/?"
+    CreateFolder path="\(@:ServiceName)/\(v:Username)"
 	GetVariable mv:URLs
 	RepeatwithEach
 		Comment
