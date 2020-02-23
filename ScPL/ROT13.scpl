@@ -40,7 +40,7 @@ GetTextfromInput
 GetDictionaryfromInput -> v:Codificaciones
 
 Comment
-| Como se mencionó anteriormente, si hay más de una codificación, se le pedirá al usuario que seleccione qué salida copiar
+| Como se menciona más arriba, si hay más de una codificación, se le pide al usuario que seleccione qué salida copiar
 GetDictionaryValue get="All Keys"
 Count Items
 If input="Is Greater Than" number=1
