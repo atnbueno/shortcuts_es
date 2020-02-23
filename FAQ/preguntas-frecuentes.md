@@ -10,7 +10,7 @@ Conocemos cuatro atajos para descargar multimedia de múltiples redes sociales. 
 
 - **Media Grabber (MG)**: Aunque también aparece por Reddit, su origen es el grupo de Telegram [@ShortcutsApps](https://t.me/ShortcutsApps), su autor es el usuario [@sayem314](https://t.me/sayem314), y hay una [versión para iOS 12](https://kutt.it/mgsc) y una [version beta para iOS 13](https://kutt.it/mg140b4). También hay un [repositorio en GitHub](https://github.com/MediaGrabber/iOS-Workflow) asociado.
 
-- **R⤓Download**: Encontrado también en t.me/ShortcutsApps, su autor es [@r07qxo](https://t.me/r07qxo) en Telegram y Twitter. Al [instalar R⤓Download](https://www.icloud.com/shortcuts/266b15300f0a4ecd9843ecb14486c20b) puedes ignorar la pregunta de importación.
+- **R⤓Download**: [Disponible en RoutineHub](https://routinehub.co/shortcut/4448). Su autor es [@r07qxo](https://t.me/r07qxo) en Telegram y Twitter.
 
 - **Media Mutt**: [Disponible en RoutineHub](https://routinehub.co/shortcut/3184). Por defecto soporta vídeos de YouTube, posts de Instagram, Reddit y Tumblr, e imágenes de Imgur y Gfycat, pero hay [extensiones](https://routinehub.co/search/?q=go+fetch+from) para vídeos de Dailymotion, perfiles de Instagram y posts de Facebook y Vero. Un detalle importante es que no depende de servidores externos como los otros tres, por lo que dejará de funcionar menos frecuentemente.
 
