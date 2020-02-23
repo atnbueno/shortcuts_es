@@ -3,7 +3,6 @@
 
 @set scTitle "Idioma del sistema"
 @set scVersion "1.0.1"
-@set scURL "https://www.atnbueno.com/atajos/IdiomaDelSistema"
 @set scLanguage es
 @set scRoutineHubID 3006
 
@@ -14,7 +13,6 @@ Comment
 |
 | TITLE=\(@:scTitle)
 | VERSION=\(@:scVersion)
-| URL=\(@:scURL)
 | LANGUAGE=\(@:scLanguage)
 |
 | RoutineHubUpdate
