@@ -1,0 +1,79 @@
+@ShowInShareSheet [string url]
+@Icon camera
+@Color orange
+
+@set ServiceName "storiesig" // ScPL only
+@set ServicePrefix "https://\(@:ServiceName).com/stories/" // ScPL only
+
+Comment
+| Estaba mirando cómo descargar Historias de Instagram para alguien y encontré www.\(@:ServiceName).com. Al ver lo simple que es, decidí hacer un atajo con él, lo cual fue relativamente fácil de hacer. Puede servir como ejemplo para aprender Atajos, así que he agregado comentarios en los pasos no triviales — @atnbueno (2019-12-23)
+
+Comment "El atajo funciona con nombres de usuario o URL que se comparten con él. Si no se comparte nada, los pedirá, ofreciendo el portapapeles como entrada predeterminada."
+GetVariable s:ShortcutInput
+Count Items
+If input=Equals value=0
+	AskforInput question="¿Usuario o URL de Instagram?" defaultAnswer=s:Clipboard
+Otherwise
+	GetVariable s:ShortcutInput
+End
+
+Comment "Limpia la entrada para obtener el nombre de usuario"
+ReplaceText findText="(?:https://(?:www\\.)?instagram\\.com/)?([^/?]+)([/?].*)?" replaceWith="$1" caseSensitive=false regularExpression=true
+ReplaceText findText="[^\\w.]" caseSensitive=false regularExpression=true
+ChangeCase lowercase
+SetVariable Username
+
+Comment "El atajo descargará los archivos del usuario indicado en una subcarpeta de iCloud Drive/Shortcuts/\(@:ServiceName)/"
+URL "\(@:ServicePrefix)\(v:Username)"
+GetContentsofURL advanced=false
+
+Comment
+| Obten el código HTML de la página, decodificando los caracteres "&"
+|
+| - El "truco" para acceder a la fuente HTML es cambiar el nombre del archivo descargado a algo con una extensión ".txt"
+| - Los "&" en la fuente HTML están codificadas como "&amp;" así que los enlaces que los incluyen no se pueden usar tal cual
+SetName name="html.txt" -> mv:"Set Name"
+ReplaceText findText="&amp;" replaceWith="&" -> mv:"Replace Text"
+
+Comment
+| Extrae las URL que aparecen justo antes de la palabra "DOWNLOAD"
+|
+| - La expresión regular usada significa: captura desde "https://" hasta las comillas (") que van seguidas por el texto ">DOWNLOAD""
+MatchText pattern="https://[^\"]+(?=\"[^>]+>DOWNLOAD)" caseSensitive=true
+
+Comment
+| A veces tiene que esperar un momento para dar tiempo a Atajos para procesar los datos que descarga
+|
+| - Si un atajo que funciona con archivos descargados funciona a veces sí y a veces no, a menudo es suficiente añadir una pausa de un segundo para que siempre funcione
+Wait
+
+Comment
+| Los siguientes "Combinar" y "Obtener URL..." convierten los fragmentos encontrados en URL
+|
+| - Aunque visualmente son iguales, Atajos los consideran internamente diferentes tipos de datos
+| - Si esto no se hace, se obtendrá el error "No se especificó una URL"
+CombineText separator="New Lines"
+GetURLsfromInput -> mv:URLs
+Count Items -> mv:Count
+
+Comment "Notifica al usuario de lo que se ha encontrado."
+If input="Is Greater Than" number=0
+	Comment "Pregunta al usuario si desea descargar los archivos, recordando dónde se guardarán"
+	ShowAlert title=@:ServiceName message="Se han encontrado \(mv:Count) ficheros\n\nQuieres descargarlos a /Shortcuts/\(@:ServiceName)/\(v:Username)/?"
+    CreateFolder path="\(@:ServiceName)/\(v:Username)"
+	GetVariable mv:URLs
+	RepeatwithEach
+		Comment
+        | Descarga y guarda cada fichero
+		| 
+        | - Afortunadamente, cada fichero tiene su propio nombre único, por lo que no tenemos que ocuparnos de eso
+		GetContentsofURL
+		SaveFile askWheretoSave=false destinationPath="\(@:ServiceName)/\(v:Username)/" overwriteIfFileExists=true
+	End
+    Comment "Como paso final, ofrezca al usuario la opción de abrir la carpeta correspondiente en iCloud Drive"
+	ShowAlert title=@:ServiceName message="Se han descargado \(mv:Count) ficheros\n\nQuieres abrir la carpeta /Shortcuts/\(@:ServiceName)/\(v:Username)/?"
+	URL "shareddocuments:///private/var/mobile/Library/Mobile%20Documents/iCloud~is~workflow~my~workflows/Documents/\(@:ServiceName)/\(v:Username)/"
+	OpenURLs
+Otherwise
+	ShowAlert title=@:ServiceName message="Nada que descargar del usuario \"\(v:Username)\"" showCancelButton=false
+End
