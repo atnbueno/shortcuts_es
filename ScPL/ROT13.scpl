@@ -3,58 +3,51 @@
 @Color orange
 
 Comment
-| This started as a quick and dirty implementation of ROT13, the text-scrambling cypher¹ that it's its own inverse. It is typically used online to hide information from a casual glance (spoilers, punchlines, puzzle solutions...).
+| Este atajo empezó como una implementación rápida y casual de ROT13, el cifrado de cifrado de texto que es su propio inverso¹. Por lo general, se usa en línea para ocultar información de una mirada casual (destripes, finales de chiste, soluciones de rompecabezas ...).
 |
-| Now it also does ROT5 (only digits), ROT18 (letters and digits), and ROT47 (using all the printable ASCII). And, thanks to Javascript, it's 10-100 faster than the original, supports diacritics, and can rotate really long text without crashing. — @atnbueno (2020-01-25)
+| Ahora también hace ROT5 (solo dígitos), ROT18 (letras y dígitos) y ROT47 (usando todos los ASCII imprimibles). Y, gracias a Javascript, es 10-100 más rápido que el original, admite signos diacríticos y puede rotar textos muy largos sin colgarse. — @atnbueno (2020-01-25)
 |
-| (¹) See https://en.wikipedia.org/wiki/ROT13 for details
-|
-| RoutineHubUpdate
-|
-| Current Version: "2.0.0"
-| RoutineHub ID: "4313"
-|
-| RoutineHubUpdate
+| (¹) Ver https://es.wikipedia.org/wiki/ROT13 para más información
 
 Comment 
-| The two-level dictionary below contains the substitutions of the four encodings offered.
+| El siguiente diccionario de dos niveles contiene las sustituciones de las cuatro codificaciones ofrecidas.
 |
-| If you don't want any of them, delete the corresponding entry in the first level of the dictionary.
+| Si no quiere alguno de ellos, elimine la entrada correspondiente en el primer nivel del diccionario.
 |
-| As long as there is more than one encoding, the user will be asked to select one of the outputs.
-Dictionary {ROT47: {"!": P, "\"": Q, "#": R, "$": S, "%": T, "&": U, "'": V, "(": W, ")": X, "*": Y, "+": Z, ",": "[", "-": "\\", ".": "]", "/": "^", "0": _, "1": "`", "2": a, "3": b, "4": c, "5": d, "6": e, "7": f, "8": g, "9": h, ":": i, ";": j, "<": k, "=": l, ">": m, "?": n, "@": o, A: p, B: q, C: r, D: s, E: t, F: u, G: v, H: w, I: x, J: y, K: z, L: "{", M: "|", N: "}", O: "~", P: "!", Q: "\"", R: "#", S: "$", T: "%", U: "&", V: "'", W: "(", X: ")", Y: "*", Z: "+", "[": ",", "\\": "-", "]": ".", "^": "/", _: "0", "`": "1", a: "2", b: "3", c: "4", d: "5", e: "6", f: "7", g: "8", h: "9", i: ":", j: ";", k: "<", l: "=", m: ">", n: "?", o: "@", p: A, q: B, r: C, s: D, t: E, u: F, v: G, w: H, x: I, y: J, z: K, "{": L, "|": M, "}": N, "~": O}, ROT18: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m, "0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4"}, ROT13: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m}, ROT5: {"0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4"}} -> v:Encodings
+| Mientras haya más de una codificación, se le pedirá al usuario que seleccione una de las salidas.
+Dictionary {ROT47: {"!": P, "\"": Q, "#": R, "$": S, "%": T, "&": U, "'": V, "(": W, ")": X, "*": Y, "+": Z, ",": "[", "-": "\\", ".": "]", "/": "^", "0": _, "1": "`", "2": a, "3": b, "4": c, "5": d, "6": e, "7": f, "8": g, "9": h, ":": i, ";": j, "<": k, "=": l, ">": m, "?": n, "@": o, A: p, B: q, C: r, D: s, E: t, F: u, G: v, H: w, I: x, J: y, K: z, L: "{", M: "|", N: "}", O: "~", P: "!", Q: "\"", R: "#", S: "$", T: "%", U: "&", V: "'", W: "(", X: ")", Y: "*", Z: "+", "[": ",", "\\": "-", "]": ".", "^": "/", _: "0", "`": "1", a: "2", b: "3", c: "4", d: "5", e: "6", f: "7", g: "8", h: "9", i: ":", j: ";", k: "<", l: "=", m: ">", n: "?", o: "@", p: A, q: B, r: C, s: D, t: E, u: F, v: G, w: H, x: I, y: J, z: K, "{": L, "|": M, "}": N, "~": O}, ROT18: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m, "0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4"}, ROT13: {A: N, B: O, C: P, D: Q, E: R, F: S, G: T, H: U, I: V, J: W, K: X, L: Y, M: Z, N: A, O: B, P: C, Q: D, R: E, S: F, T: G, U: H, V: I, W: J, X: K, Y: L, Z: M, a: n, b: o, c: p, d: q, e: r, f: s, g: t, h: u, i: v, j: w, k: x, l: y, m: z, n: a, o: b, p: c, q: d, r: e, s: f, t: g, u: h, v: i, w: j, x: k, y: l, z: m}, ROT5: {"0": "5", "1": "6", "2": "7", "3": "8", "4": "9", "5": "0", "6": "1", "7": "2", "8": "3", "9": "4"}} -> v:Codificaciones
 
 Comment
-| By default the shortcut converts whatever text is shared with it. If the shortcut receives no input, the user will be asked for it, while being offered the contents of the clipboard as initial text.
+| Por defecto, el atajo convierte cualquier texto que se comparta con él. Si el atajo no recibe ninguna entrada, se le solicitará al usuario, ofreciéndose el contenido del portapapeles como texto inicial.
 GetVariable s:ShortcutInput
 Count Items
 If input=Equals number=0 value=0
-	AskforInput question="Text to ROTate?" defaultAnswer=s:Clipboard
+	AskforInput question="¿Texto a ROTar?" defaultAnswer=s:Clipboard
 Otherwise
 	GetVariable s:ShortcutInput
-End -> v:"Text to ROTate"
+End -> v:"Texto a ROTar"
 
 Comment
-| This JavaScript snippet does all the hard work, and it's so fast that it can apply all the encodings in a fraction of the time it took the original no-javascript shortcut to apply just one of them. Now the user can select the encoding while seeing the result 😄
+| Este fragmento de JavaScript hace todo el trabajo, y es tan rápido que puede aplicar todas las codificaciones en una fracción del tiempo que tardaba el atajo original (sin javascript) en aplicar solo uno de ellos. Ahora el usuario puede seleccionar la codificación mientras ve el resultado 😄
 Text -> v:JavaScript
-| let encodings = \(v:Encodings);
-| let text = `\(v:"Text to ROTate")`.normalize("NFD");
-| Object.keys(encodings).forEach(encoding=>{encodings[encoding] = text.split("").map(char=>encodings[encoding][char]||char).join("")});
-| document.write(JSON.stringify(encodings));
+| let codificaciones = \(v:Codificaciones);
+| let texto = `\(v:"Texto a ROTar")`.normalize("NFD");
+| Object.keys(codificaciones).forEach(codificacion=>{codificaciones[codificacion] = texto.split("").map(char=>codificaciones[codificacion][char]||char).join("")});
+| document.write(JSON.stringify(codificaciones));
 URL "data:text/html;charset=utf-8,<script>\(v:JavaScript)</script>"
 GetFileofType "com.apple.webarchive"
 GetTextfromInput
-GetDictionaryfromInput -> v:Encodings
+GetDictionaryfromInput -> v:Codificaciones
 
 Comment
-| As mentioned before, if there is more than one encoding, the user will be asked to select which output to copy
+| Como se mencionó anteriormente, si hay más de una codificación, se le pedirá al usuario que seleccione qué salida copiar
 GetDictionaryValue get="All Keys"
 Count Items
 If input="Is Greater Than" number=1
-	GetVariable v:Encodings
-	ChoosefromList prompt="Select which output to copy"
+	GetVariable v:Codificaciones
+	ChoosefromList prompt="Selecciona el resultado a copiar"
 Otherwise
-	GetVariable v:Encodings
+	GetVariable v:Codificaciones
 	GetDictionaryValue get="All Values"
-End -> v:Encoding
+End -> v:Codificacion
 CopytoClipboard
