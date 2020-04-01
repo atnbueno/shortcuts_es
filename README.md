@@ -10,7 +10,7 @@ Luego te pueden interesar algunos de estos enlaces:
 * ["Descubriendo Shortcuts para iOS"](http://shrtcts.es/): un libro sobre Atajos en iOS 12 de los fundadores de la comunidad, [@frankisok](https://t.me/frankisok), [@rafaelroa](https://t.me/rafaelroa) y [@joseruig](https://t.me/joseruig)
 * La [app "Atajos" para iOS 12](https://apps.apple.com/es/app/atajos/id915249334) en la AppStore (no necesaría en iOS 13, donde Atajos forma parte del sistema)
 * Los mejores atajos creados por la comunidad de [@shortcuts_es](https://t.me/shortcuts_es) se publican en el canal [@reposhortcuts_es](https://t.me/reposhortcuts_es).
-* [@joercha](https://t.me/joercha) (el usuario con más _karma_ de la comunidad :grin:) recopila los mejores atajos que encuentra a lo largo y ancho de Internet en otro canal de Telegram: [@TodoAtajos](https://t.me/TodoAtajos)
+* [@joercha](https://t.me/joercha) (el usuario con más _karma_ de la comunidad :grin:) recopila los mejores atajos que encuentra a lo largo y ancho de Internet en otro canal de Telegram: [@TodoAtajos](https://t.me/TodoAtajos), y además hizo unos [minitutoriales que encontrarás en el canal](https://t.me/shortcuts_es/56925).
 
 Más enlaces interesantes, pero en inglés:
 * <https://routinehub.co/> - La mayor colección atajos, organizados por categorías, explicados con detalle, donde puedes hacerte tu lista de favoritos, y enviar comentarios a los autores de los atajos
