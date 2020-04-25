@@ -6,7 +6,7 @@ Por ahora esto está bastante vacío, pero ya lo iremos llenando. Para empezar, 
 
 Luego te pueden interesar algunos de estos enlaces:
 
-* [Manual del usuario de Atajos](https://support.apple.com/es-us/guide/shortcuts/welcome/ios) de Apple
+* [Manual del usuario de Atajos](https://support.apple.com/guide/shortcuts/welcome/ios) de Apple
 * ["Descubriendo Shortcuts para iOS"](http://shrtcts.es/): un libro sobre Atajos en iOS 12 de los fundadores de la comunidad, [@frankisok](https://t.me/frankisok), [@rafaelroa](https://t.me/rafaelroa) y [@joseruig](https://t.me/joseruig)
 * La [app "Atajos" para iOS 12](https://apps.apple.com/es/app/atajos/id915249334) en la AppStore (no necesaría en iOS 13, donde Atajos forma parte del sistema)
 * Los mejores atajos creados por la comunidad de [@shortcuts_es](https://t.me/shortcuts_es) se publican en el canal [@reposhortcuts_es](https://t.me/reposhortcuts_es).
