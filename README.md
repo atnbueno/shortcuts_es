@@ -30,9 +30,10 @@ Apps que complementan la app oficial (en inglés si no se dice otra cosa). Prime
 Estas otras también te pueden interesar:
 * [**Scriptable**](https://scriptable.app/) - Ejecución de scripts programados en JavaScript ([gratuita con propinas](https://apps.apple.com/es/app/id1405459188))
 * [**Shortcutify**](https://shortcutify.app/) - Integración y automatizaciones con servicios como Spotify, Airtable o Google Maps ([gratuita con propinas](https://apps.apple.com/es/app/id1477222244))
-* [**PushCut**](https://www.pushcut.io/) - Notificaciones para atajos y HomeKit ([Subscripción de 1-2€/mes](https://apps.apple.com/es/app/id1450936447), o gratuita pero muy limitada). [Comentada en HomeKit Hero](https://homekithero.com/2019/10/27/pushcut-app-review/) en inglés.
 * [**Charty**](https://chartyios.app/) - Añade acciones para hacer gráficas desde Atajos ([3,50€ en mayo, 6€ a partir de junio](https://apps.apple.com/es/app/charty-for-shortcuts/id1494386093)). [Comentada en Six Colors](https://sixcolors.com/post/2020/05/fun-with-charty-generate-charts-with-shortcuts/) en inglés.
+* [**GizmoPack**]() - Añade nuevas acciones, gratuitas y de pago, a la app original ([5,50€](https://apps.apple.com/es/app/gizmopack/id1505218567), pero sólo por las acciones gratuitas ya es útil).
 * [**LaunchCuts**](https://launchcuts.com/) - Lanzador y organizador de atajos ([9€](https://apps.apple.com/es/app/id1489780246)). [Comentada por Viticci](https://www.macstories.net/reviews/launchcuts-review-a-better-way-to-organize-your-shortcuts-with-folders-advanced-search-and-custom-views/) en inglés.
+* [**PushCut**](https://www.pushcut.io/) - Notificaciones para atajos y HomeKit ([Subscripción de 1-2€/mes](https://apps.apple.com/es/app/id1450936447), o gratuita pero muy limitada). [Comentada en HomeKit Hero](https://homekithero.com/2019/10/27/pushcut-app-review/) en inglés.
 * [**Shorcutor**](https://shortcutor.com/) - Editor gráfico de atajos para Windows/macOS/Linux ([Subscripción de 4-5€/mes](https://shortcutor.com/buy.html))
 
 Para acabar, enlaces con información técnica, también en inglés:
