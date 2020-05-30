@@ -2,11 +2,19 @@
 @Icon camera
 @Color orange
 
-@set ServiceName "storiesig" // ScPL only
-@set ServicePrefix "https://\(@:ServiceName).com/stories/" // ScPL only
+@set ServiceName "instaview.me" // ScPL only
 
 Comment
-| Estaba mirando cómo descargar Historias de Instagram para alguien y encontré www.\(@:ServiceName).com. Al ver lo simple que es, decidí hacer un atajo con él, lo cual fue relativamente fácil de hacer. Puede servir como ejemplo para aprender Atajos, así que he agregado comentarios en los pasos no triviales — @atnbueno (2019-12-23)
+| Estaba mirando cómo descargar Historias de Instagram para alguien y encontré una web que hacía casi todo el trabajo. Decidí hacer un atajo con ella, y fue relativamente fácil de hacer. Puede servir como ejemplo para aprender Atajos, así que he agregado comentarios en los pasos no triviales — @atnbueno (2019-12-23)
+|
+| El sitio dejó de funcionar el 29 de mayo, por lo que pasé a usar \(@:ServiceName), un servicio parecido — @atnbueno (2020-05-30)
+|
+| RoutineHubUpdate
+| 
+| Current Version: "1.2.0"
+| RoutineHub ID: "4270"
+|
+| RoutineHubUpdate
 
 Comment "El atajo funciona con nombres de usuario o URL que se comparten con él. Si no se comparte nada, los pedirá, ofreciendo el portapapeles como entrada predeterminada."
 GetVariable s:ShortcutInput
@@ -23,8 +31,15 @@ ReplaceText findText="[^\\w.]" caseSensitive=false regularExpression=true
 ChangeCase lowercase
 SetVariable Username
 
+Comment "Obtiene el ID del usuario (dará error si el usuario no existe)"
+URL "https://www.instagram.com/\(v:Username)/?__a=1"
+GetContentsofURL advanced= false
+GetDictionaryfromInput
+GetDictionaryValue get="Value" key="graphql.user.id"
+SetVariable UserID
+
 Comment "El atajo descargará los archivos del usuario indicado en una subcarpeta de iCloud Drive/Shortcuts/\(@:ServiceName)/"
-URL "\(@:ServicePrefix)\(v:Username)"
+URL "https://instaview.me/en/stories/\(v:Username)/download/\(v:UserID)"
 GetContentsofURL advanced=false
 
 Comment
@@ -36,13 +51,13 @@ SetName name="html.txt" -> mv:"Set Name"
 ReplaceText findText="&amp;" replaceWith="&" -> mv:"Replace Text"
 
 Comment
-| Extrae las URL que aparecen justo antes de la palabra "DOWNLOAD"
+| Extrae las URL que contienen el fragment de texto "_n"
 |
-| - La expresión regular usada significa: captura desde "https://" hasta las comillas (") que van seguidas por el texto ">DOWNLOAD""
-MatchText pattern="https://[^\"]+(?=\"[^>]+>DOWNLOAD)" caseSensitive=true
+| - La expresión regular usada significa: captura cualquier cosa sin comillas que aparezca detrás de un 'src="' y que contenga '_n'
+MatchText pattern="(?<=src=\")[^\"]+?_n[^\"]+" caseSensitive=true
 
 Comment
-| A veces tiene que esperar un momento para dar tiempo a Atajos para procesar los datos que descarga
+| A veces hay que esperar un momento para dar tiempo a Atajos para procesar los datos que descarga
 |
 | - Si un atajo que funciona con archivos descargados funciona a veces sí y a veces no, a menudo es suficiente añadir una pausa de un segundo para que siempre funcione
 Wait
