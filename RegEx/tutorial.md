@@ -20,3 +20,7 @@ compatibilidad en navegadores (para Atajos fíjate en la columna "Safari"). Las 
 
 
 _To Be Continued..._ 😅
+
+## Fragmentos a aprovechar en alguna parte
+
+- No usar `.*?` or `(.*?)` al principio o al final de una regex. Pasan cosas raras.
