@@ -1,7 +1,7 @@
 # Expresiones regulares en Atajos
 
 Las expresiones regulares ("regexes") existen desde mucho antes que los Atajos, así que lo que se aprenda de ellas en Atajos
-puede servir en otros sitios. Aunque una expresión regular ("regex") se llama igual en todas partes, hay más de una variantes
+puede servir en otros sitios. Aunque una expresión regular ("regex") se llama igual en todas partes, hay multiples variantes
 de _regex_. Las diferencias entre ellas son sutiles y en este documento se avisará si se usa algo que no sea igual en la 
 mayoría de variantes. La Wikipedia en inglés tiene un excelente [resumen de las diferencias entre variantes de _regex_](https://en.wikipedia.org/wiki/Comparison_of_regular-expression_engines#Language_features).
 
@@ -13,10 +13,10 @@ ofrecidas, selecciona "PCRE" (la más parecida de las variantes populares).
 Otra variante relevante aquí es la de JavaScript. Se puede usar en Atajos ejecutando JavaScript en un "Obtener contenido de
 página" o equivalente (esto se suele hacer por razones de velocidad). Esta variante está muy bien explicada en MDN:
 <https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions>. En esta URL lo más útil es la tabla de
-compatibilidad en navegadores (para Atajos fíjate en la columna "Safari"). Las diferencias más importantes con ICU/PCRE son:
+compatibilidad en navegadores (para Atajos fíjate en la columna "Safari"). Las diferencias más importantes entre las variantes JavaScript y ICU/PCRE son:
 
-- No se pueden usar capturas con nombre (_named captures_, en inglés)
-- No se pueden usar _look-behinds_
+- En JavaScript no se pueden usar capturas con nombre (_named captures_, en inglés)
+- En JavaScript no se pueden usar _look-behinds_
 
 
 _To Be Continued..._ 😅
