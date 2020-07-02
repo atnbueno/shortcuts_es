@@ -65,3 +65,12 @@ Con la acción "Enviar mensaje con WhatsApp" a lo más que puedes llegar es a qu
 Otra posibilidad es que Siri te sugiera _reenviar_ un mensaje previamente enviado, por lo que no podrás cambiar ni el texto no el destinatario. Eso lo podrás hacer automáticamente, sin intervención del usuario, pero ten en cuenta que Siri es bastante caprichosa en cuanto a las sugerencias. No es consistente de un usuario a otro.
 
 Y si por "programar el envío" quieres decir a una cierta hora, o al salir de o llegar a un sitio, sin intervención tuya, eso tampoco es posible ([te aparecerá una notificación que tienes que pulsar](https://github.com/atnbueno/shortcuts_es/blob/master/FAQ/preguntas-frecuentes.md#como-evitar-las-notificaciones-de-las-nuevas-automatizaciones-de-ios-13) para confirmar la ejecución del atajo).
+
+### ¿Puedo conversar vía WhatsApp con un número sin agregarlo a mis contactos?
+
+Sí, WhatsApp permite abrir una conversación con un número que no esté en nuestros contactos usando la URL <https://api.whatsapp.com/send?phone=XXXXXXXXXXX>, donde "XXXXXXXXXXX" es el número con el que queremos conversar. Dicho número debe incluir el prefijo telefónico internacional correspondiente, y esto suele provocar confusión y más de una consulta en el grupo de Telegram. 
+
+Dada la experiencia en el grupo hemos hecho nuestra propia versión, que intenta explicar y recordar el tema del prefijo, así como avisar de los errores más frecuentes:
+<http://shrtcts.es/shortcuts/468b3110ad5b4bf285d24635c1390987>
+
+Este atajo funciona tanto en iOS 12 como en iOS 13. Al importarlo pregunta por el prefijo telefónico internacional a usar por defecto. Y al usarlo comprueba el número con el que se quiere conversar empiezan por un prefijo válido.
