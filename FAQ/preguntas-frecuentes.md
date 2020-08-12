@@ -8,7 +8,7 @@ Conocemos cuatro atajos para descargar multimedia de múltiples redes sociales. 
 
 - **Social Media Downloader (SMD)**: Encontrarás la última versión en el [Twitter del autor](https://twitter.com/Wirexia9) (la 4.0.2 es compatible con iOS 13)
 
-- **Media Grabber (MG)**: Aunque también aparece por Reddit, su origen es el grupo de Telegram [@ShortcutsApps](https://t.me/ShortcutsApps), su autor es el usuario [@sayem314](https://t.me/sayem314), y hay una [versión para iOS 12](https://kutt.it/mgsc) y una [version beta para iOS 13/14 de la nueva versión 2.0](https://kutt.it/mg2b3). También hay un [repositorio en GitHub](https://github.com/MediaGrabber/iOS-Workflow) asociado.
+- **Media Grabber (MG)**: Aunque también aparece por Reddit, su origen es el grupo de Telegram [@ShortcutsApps](https://t.me/ShortcutsApps), su autor es el usuario [@sayem314](https://t.me/sayem314), y hay una [versión para iOS 12](https://kutt.it/mgsc) y una [version beta para iOS 13/14 de la nueva versión 2.0](https://kutt.it/mg2b5). También hay un [repositorio en GitHub](https://github.com/MediaGrabber/iOS-Workflow) asociado.
 
 - **R⤓Download**: [Disponible en RoutineHub](https://routinehub.co/shortcut/4448). Su autor es [@r07qxo](https://t.me/r07qxo) en Telegram y Twitter.
 
