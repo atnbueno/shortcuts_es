@@ -14,6 +14,12 @@ Conocemos cuatro atajos para descargar multimedia de múltiples redes sociales. 
 
 - **Media Mutt**: [Disponible en RoutineHub](https://routinehub.co/shortcut/3184). Por defecto soporta vídeos de YouTube, posts de Instagram, Reddit y Tumblr, e imágenes de Imgur y Gfycat, pero hay [extensiones](https://routinehub.co/search/?q=go+fetch+from) para vídeos de Dailymotion, perfiles de Instagram y posts de Facebook y Vero. Un detalle importante es que no depende de servidores externos como los otros tres, por lo que dejará de funcionar menos frecuentemente.
 
+Después hay muchos que permiten descargar multimedia sólo de una red social en particular. En nuestra comunidad se han recomendado estos dos:
+
+- **DTwitter**: [Disponible en RoutineHub](https://routinehub.co/shortcut/6166), permite descargar fotos, vídeos, y GIFs al máximo de calidad disponible en Twitter. Su autor es **Mauri** y participa en [@shortcuts_es](https://t.me/shortcuts_es/).
+
+- **Instagram Media Saver**: [Disponible en RoutineHub](https://routinehub.co/shortcut/5195), permite descargar fotos, vídeos, historias y _reels_ de Instagram. Su autor es [mvan231](https://www.reddit.com/user/mvan231) en Reddit.
+
 ### ¿Como evitar las notificaciones de las nuevas automatizaciones de iOS 13?
 
 Depende de la automatización. Si el origen de la automatización es una acción del usuario, puedes omitir la notificación desmarcando la opción "Solicitar confirmación". Las otras automatizaciones (momento del día, llegar, salir) requieren dicha confirmación y la correspondiente notificación es inevitable. La única excepción parece ser el "No molestar", que se puede programar y usar como automatización sin notificación.
