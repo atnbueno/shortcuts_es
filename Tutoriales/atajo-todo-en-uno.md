@@ -20,8 +20,9 @@ Es un tópico común en la comunidad preguntar cómo combinar atajos o simplemen
        * [DTikTok](https://routinehub.co/shortcut/5870)
 
 1) *(Opcional)*  Abre cada atajo para visualizar sus acciones, después desactiva la opción que dice Mostrar al compartir en los detalles del atajo.
-![Desactivar la opción "Mostrar al compartir"](https://i.imgur.com/91nw5u2.png)
+![Desactivar la opción "Mostrar al compartir"](https://raw.githubusercontent.com/heismauri/shortcuts_es/patch-1/Tutoriales/atajo-todo-en-uno/atajo-todo-en-uno-2.png)
 1) Crea un nuevo atajo, el cual unirá todos los atajos seleccionados anteriormente en uno, puedes guiarte por las capturas de pantalla de abajo o usar [esta plantilla](https://www.icloud.com/shortcuts/3cc66e7cdd424ea2b026233ebd44cc2e)
-![Plantilla del atajo Todo-En-Uno](https://i.imgur.com/wyOs097.png)
+![Plantilla del atajo Todo-En-Uno](https://raw.githubusercontent.com/heismauri/shortcuts_es/patch-1/Tutoriales/atajo-todo-en-uno/atajo-todo-en-uno-1.png)
 1) Ahora es momento de añadir los atajos seleccionados al diccionario que está por encima de todo. Harás clic en *"Añadir nuevo ítem"*, después te preguntará que tipo de valor quieres añadir, a lo que seleccionarás *Texto*. Donde dice *Clave* pondremos el sitio web que es compatible con el atajo (sin https://, www, o m), en este caso lo haremos con *DTwitter*, entonces escribiremos primero *twitter.com*, y en la segunda columna donde dice *Texto* escribiremos el nombre exacto del atajo, en este caso *DTwitter*.
+![Añadir atajos al diccionario](https://raw.githubusercontent.com/heismauri/shortcuts_es/patch-1/Tutoriales/atajo-todo-en-uno/atajo-todo-en-uno-3.png)
 1) ¡Ya estás listo! Ahora solo debes repetir el paso anterior con todos los atajos que previamente seleccionaste para que tu atajo se convierta en un poderoso todo en uno.
